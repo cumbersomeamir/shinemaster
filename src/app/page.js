@@ -1,102 +1,249 @@
-import Image from "next/image";
+import Navigation from './components/Navigation';
+import HeroSection from './components/HeroSection';
+import FeaturesSection from './components/FeaturesSection';
+import ServicesGrid from './components/ServicesGrid';
+import StatsSection from './components/StatsSection';
+import ProcessSection from './components/ProcessSection';
+import TestimonialsSection from './components/TestimonialsSection';
+import FloatingParticles from './components/FloatingParticles';
+import MouseOilAnimation from './components/MouseOilAnimation';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="bg-[#0A0A0B] text-white overflow-x-hidden">
+      {/* Navigation */}
+      <Navigation />
+      
+      {/* Global Effects */}
+      <FloatingParticles />
+      <MouseOilAnimation />
+      
+      {/* Hero Section with Animated Sedan */}
+      <HeroSection />
+      
+      {/* Company Stats */}
+      <StatsSection />
+      
+      {/* Features Section */}
+      <FeaturesSection />
+      
+      {/* Services Grid */}
+      <ServicesGrid />
+      
+      {/* Our Process Section */}
+      <ProcessSection />
+      
+      {/* Customer Testimonials */}
+      <TestimonialsSection />
+      
+      {/* Technology & Facts Section */}
+      <section className="py-24 bg-gradient-to-b from-[#1A1A1B] to-[#0A0A0B] relative overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#00D4FF] to-[#33DDFF] bg-clip-text text-transparent mb-6">
+              Advanced Technology
+            </h2>
+            <p className="text-xl text-[#8B8B8D] max-w-3xl mx-auto">
+              We use cutting-edge equipment and premium materials from industry leaders
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="p-8 bg-gradient-to-br from-[#2D2D30]/50 to-[#1A1A1B]/50 rounded-2xl border border-[#00D4FF]/20">
+              <div className="text-4xl mb-4">🔬</div>
+              <h3 className="text-xl font-bold text-[#00D4FF] mb-3">Nano-Technology</h3>
+              <p className="text-[#8B8B8D] mb-4">Advanced nano-coatings that bond at molecular level for superior protection</p>
+              <div className="text-sm text-[#00D4FF]">• 9H Hardness Rating • Self-Healing Properties</div>
+            </div>
+            
+            <div className="p-8 bg-gradient-to-br from-[#2D2D30]/50 to-[#1A1A1B]/50 rounded-2xl border border-[#00D4FF]/20">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold text-[#00D4FF] mb-3">Precision Tools</h3>
+              <p className="text-[#8B8B8D] mb-4">German-engineered polishing machines with micro-adjustment capabilities</p>
+              <div className="text-sm text-[#00D4FF]">• ±0.1mm Accuracy • Temperature Control</div>
+            </div>
+            
+            <div className="p-8 bg-gradient-to-br from-[#2D2D30]/50 to-[#1A1A1B]/50 rounded-2xl border border-[#00D4FF]/20">
+              <div className="text-4xl mb-4">🌡️</div>
+              <h3 className="text-xl font-bold text-[#00D4FF] mb-3">Climate Control</h3>
+              <p className="text-[#8B8B8D] mb-4">Controlled environment facilities for optimal coating application</p>
+              <div className="text-sm text-[#00D4FF]">• 22°C ±1°C • 45% Humidity • HEPA Filtered</div>
+            </div>
+            
+            <div className="p-8 bg-gradient-to-br from-[#2D2D30]/50 to-[#1A1A1B]/50 rounded-2xl border border-[#00D4FF]/20">
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-xl font-bold text-[#00D4FF] mb-3">Paint Thickness Gauge</h3>
+              <p className="text-[#8B8B8D] mb-4">Digital measurement tools for precise coating application</p>
+              <div className="text-sm text-[#00D4FF]">• 0.1 Micron Precision • Non-Destructive Testing</div>
+            </div>
+            
+            <div className="p-8 bg-gradient-to-br from-[#2D2D30]/50 to-[#1A1A1B]/50 rounded-2xl border border-[#00D4FF]/20">
+              <div className="text-4xl mb-4">🔍</div>
+              <h3 className="text-xl font-bold text-[#00D4FF] mb-3">LED Inspection</h3>
+              <p className="text-[#8B8B8D] mb-4">Professional-grade lighting for defect detection and quality control</p>
+              <div className="text-sm text-[#00D4FF]">• 6000K Color Temperature • 95+ CRI Rating</div>
+            </div>
+            
+            <div className="p-8 bg-gradient-to-br from-[#2D2D30]/50 to-[#1A1A1B]/50 rounded-2xl border border-[#00D4FF]/20">
+              <div className="text-4xl mb-4">🧪</div>
+              <h3 className="text-xl font-bold text-[#00D4FF] mb-3">Premium Materials</h3>
+              <p className="text-[#8B8B8D] mb-4">Imported coatings and materials from leading global manufacturers</p>
+              <div className="text-sm text-[#00D4FF]">• SiO2 & Graphene Based • 5-10 Year Warranty</div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+      
+      {/* Industry Facts Section */}
+      <section className="py-24 bg-gradient-to-b from-[#0A0A0B] to-[#1A1A1B] relative overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#00D4FF] to-[#33DDFF] bg-clip-text text-transparent mb-6">
+              Industry Facts
+            </h2>
+            <p className="text-xl text-[#8B8B8D] max-w-3xl mx-auto">
+              Understanding the importance of professional automotive care
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-[#33DDFF] rounded-full flex items-center justify-center text-xl font-bold text-black">
+                  1
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#00D4FF] mb-2">Paint Damage Prevention</h3>
+                  <p className="text-[#8B8B8D]">UV rays cause 80% of paint fading. Professional coatings provide 99% UV protection, preserving your vehicle's value.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-[#33DDFF] rounded-full flex items-center justify-center text-xl font-bold text-black">
+                  2
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#00D4FF] mb-2">Resale Value Protection</h3>
+                  <p className="text-[#8B8B8D]">Properly maintained vehicles retain 15-20% higher resale value. Our services are an investment in your asset.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-[#33DDFF] rounded-full flex items-center justify-center text-xl font-bold text-black">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#00D4FF] mb-2">Maintenance Cost Reduction</h3>
+                  <p className="text-[#8B8B8D]">Regular professional care reduces maintenance costs by up to 40% over the vehicle's lifetime.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-[#33DDFF] rounded-full flex items-center justify-center text-xl font-bold text-black">
+                  4
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#00D4FF] mb-2">Environmental Impact</h3>
+                  <p className="text-[#8B8B8D]">Our eco-friendly products reduce environmental impact by 60% compared to traditional methods.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="p-8 bg-gradient-to-br from-[#2D2D30]/50 to-[#1A1A1B]/50 rounded-3xl border border-[#00D4FF]/30">
+                <h3 className="text-3xl font-bold text-[#00D4FF] mb-6">Did You Know?</h3>
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="text-2xl">🚗</div>
+                    <div>
+                      <div className="text-2xl font-bold text-[#33DDFF]">₹2,50,000</div>
+                      <div className="text-sm text-[#8B8B8D]">Average cost of a paint job</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="text-2xl">⏱️</div>
+                    <div>
+                      <div className="text-2xl font-bold text-[#33DDFF]">15 Days</div>
+                      <div className="text-sm text-[#8B8B8D]">Typical body shop repair time</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="text-2xl">🛡️</div>
+                    <div>
+                      <div className="text-2xl font-bold text-[#33DDFF]">5-10 Years</div>
+                      <div className="text-sm text-[#8B8B8D]">Our coating protection duration</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="text-2xl">💰</div>
+                    <div>
+                      <div className="text-2xl font-bold text-[#33DDFF]">90%</div>
+                      <div className="text-sm text-[#8B8B8D]">Cost saving vs. repainting</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Footer */}
+      <footer className="relative py-20 bg-gradient-to-t from-[#0A0A0B] to-[#1A1A1B] border-t border-[#00D4FF]/20">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            {/* Brand */}
+            <div className="md:col-span-2">
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-[#00D4FF] to-[#33DDFF] bg-clip-text text-transparent mb-4">
+                ShineMaster
+              </h3>
+              <p className="text-[#8B8B8D] mb-6 max-w-md">
+                India's premier automotive care destination, setting new standards in vehicle protection and enhancement since 2008.
+              </p>
+              <div className="flex gap-4">
+                <div className="w-10 h-10 bg-gradient-to-r from-[#00D4FF] to-[#33DDFF] rounded-full flex items-center justify-center text-black font-bold cursor-pointer hover:scale-110 transition-transform">
+                  f
+                </div>
+                <div className="w-10 h-10 bg-gradient-to-r from-[#00D4FF] to-[#33DDFF] rounded-full flex items-center justify-center text-black font-bold cursor-pointer hover:scale-110 transition-transform">
+                  i
+                </div>
+                <div className="w-10 h-10 bg-gradient-to-r from-[#00D4FF] to-[#33DDFF] rounded-full flex items-center justify-center text-black font-bold cursor-pointer hover:scale-110 transition-transform">
+                  t
+                </div>
+              </div>
+            </div>
+            
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-[#00D4FF] font-semibold mb-4">Quick Links</h4>
+              <div className="space-y-2">
+                <div className="text-[#8B8B8D] hover:text-[#00D4FF] cursor-pointer transition-colors">Services</div>
+                <div className="text-[#8B8B8D] hover:text-[#00D4FF] cursor-pointer transition-colors">Booking</div>
+                <div className="text-[#8B8B8D] hover:text-[#00D4FF] cursor-pointer transition-colors">Gallery</div>
+                <div className="text-[#8B8B8D] hover:text-[#00D4FF] cursor-pointer transition-colors">Contact</div>
+              </div>
+            </div>
+            
+            {/* Contact Info */}
+            <div>
+              <h4 className="text-[#00D4FF] font-semibold mb-4">Contact</h4>
+              <div className="space-y-2 text-[#8B8B8D]">
+                <div>📍 Premium Auto Care Center</div>
+                <div>📞 +91 98765 43210</div>
+                <div>✉️ info@shinemaster.com</div>
+                <div>🕐 Mon-Sun: 9AM-8PM</div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="border-t border-[#00D4FF]/20 pt-8 text-center">
+            <div className="w-20 h-0.5 bg-gradient-to-r from-[#00D4FF] to-[#33DDFF] mx-auto mb-4" />
+            <p className="text-[#8B8B8D] text-sm">© 2025 ShineMaster. All rights reserved. | Crafted with precision and passion.</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
