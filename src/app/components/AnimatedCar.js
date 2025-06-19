@@ -14,7 +14,7 @@ const AnimatedCar = () => {
   const rotation = scrollY * 0.3;
 
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-5">
+    <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-5">
       <div 
         className="w-80 h-80 md:w-96 md:h-96 transition-transform duration-75 ease-out"
         style={{ transform: `rotate(${rotation}deg)` }}

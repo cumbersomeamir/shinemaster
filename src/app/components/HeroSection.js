@@ -40,7 +40,7 @@ const HeroSection = () => {
 
       {/* Bottom Content */}
       <div className={`relative z-20 pb-24 text-center px-6 transition-all duration-2000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <p className="text-xl md:text-2xl text-[#8B8B8D] mb-8 max-w-3xl mx-auto">
+        <p className="text-xl md:text-2xl text-[#8B8B8D] mb-2 max-w-3xl mx-auto">
           Cutting-edge car care technology meets precision craftsmanship
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
